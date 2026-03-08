@@ -1,0 +1,499 @@
+/* Resetear algunos de los estilos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Estilos generales */
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 1.6;
+    padding-bottom: 45px;
+}
+
+h1, h2{
+    font-family: "Poppins", Arial, sans-serif;
+    transition: color 0.3s, transform 0.3s;
+}
+
+
+h1:hover, h2:hover{
+  transform: scale(1.05);
+  filter: brightness(1.25) saturate(1.3);
+}
+
+/* header flex box */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 20px;
+    background: black;
+    /* Para que se quede arriba*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid white;
+}
+
+.titulo-inicial {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.titulo-inicial h1{
+    color: white;
+}
+
+.logo {
+    width: 80px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4%;
+}
+
+/* Navegación */
+
+.nav {
+    margin-left: auto;
+}
+.nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    background: linear-gradient(to right, #00c853 0%, #ffeb3b 50%, #d50000 100%);
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 6px;
+    display: block;
+}
+
+.nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+#inicio, #sobre, #galeria, #discografia, #conciertos, #contacto{
+    scroll-margin-top: 100px;
+}
+
+/* Contenido de inicio */
+.inicio{
+    background-color: black;
+    border-bottom: 2px solid white;
+}
+
+.inicio h1{
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(to right, #00c853, #ffeb3b, #d50000);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    width: 95%;
+    text-align: center;
+    margin-top: 300px;
+    margin-bottom: 450px;
+    transition: transform 0.7s ease-in-out;
+}
+
+.inicio h1:hover{
+    transform: scale(1.1);
+}
+
+
+/* Contenido sobre el artista */
+.sobre{
+    padding: 40px;
+    background: black;
+    border-bottom: 2px solid white;  
+}
+
+.sobre h2{
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    background: linear-gradient(to right, #00c853, #ffeb3b, #d50000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+}
+
+.sobre p{
+    color: white;
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
+    column-rule: 1px solid #ccc;
+    font-size: 25px;
+}
+
+/* Contenido de galeria */
+.galeria{
+    padding: 40px;
+    background: black;
+    border-bottom: 2px solid white;
+}
+
+.galeria h2{
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    background: linear-gradient(to right, #00c853, #ffeb3b, #d50000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+}
+
+.grid-galeria{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-galeria img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform: perspective(800px) rotateX(0) rotateY(0);
+}
+
+.grid-galeria img:hover{
+    transform: perspective(800px) rotateY(12deg) rotateX(6deg) scale(1.03);
+}
+
+/* Contenido de discografía */
+.discografia{
+    padding: 40px;
+    background: black;
+    border-bottom: 2px solid white;
+}
+
+.discografia h2{
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    background: linear-gradient(to right, #00c853, #ffeb3b, #d50000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+}
+
+.canciones{
+    color: white;
+    font-size: 22px;
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+    padding-left: 25px;
+}
+
+#li1, #li2{
+    color: green;
+}
+
+#li3, #li4{
+    color: yellow;
+}
+
+#li5, #li6{
+    color: red;
+}
+
+
+.reproductor{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgb(27, 27, 27);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    border: 3px solid;
+    border-image: linear-gradient(to right, #00c853, #ffeb3b, #d50000) 1;
+}
+
+.audio-titulo{
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.reproductor audio{
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    border-radius: 10px;
+}
+
+/* contenido de conciertos */
+.conciertos{
+    padding: 40px;
+    background: black;
+    border-bottom: 2px solid white;
+}
+
+.conciertos h2{
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    background: linear-gradient(to right, #00c853, #ffeb3b, #d50000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+}
+
+.reproductor-video{
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid;
+    border-image: linear-gradient(to right, #00c853, #ffeb3b, #d50000) 1;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+.reproductor-video video{
+    display: block;
+    width: 100%;
+}
+
+/* contacto / formulario */
+.contacto{
+    padding: 40px;
+    background: black;
+    border-bottom: 2px solid white;
+}
+
+.contacto h2{
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    background: linear-gradient(to right, #00c853, #ffeb3b, #d50000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+}
+
+.form-contrato{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 14px;
+    background: rgb(27, 27, 27);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    border: 3px solid;
+    border-image: linear-gradient(to right, #00c853, #ffeb3b, #d50000) 1;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label{
+    color: white;
+    font-weight: 600;
+}
+
+.campo input{
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: inherit;
+}
+
+.campo input:focus{
+    border: 2px solid #ffeb3b;
+}
+
+.campo-full{
+    grid-column: 1 / -1;
+}
+
+.btn-enviar{
+    grid-column: 1 / -1;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(to right, #00c853, #ffeb3b, #d50000);
+    color: black;
+    transition: transform 0.3s;
+}
+
+.btn-enviar:hover{
+    transform: scale(1.02);
+}
+
+/* Footer */
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 3px 0;
+    background: linear-gradient(to right, #00c853, #ffeb3b, #d50000);
+    color: black;
+}
+
+.footer a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+/* sitio responsivo */
+@media (min-width: 901px){
+  .grid-galeria{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .form-contrato{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px){
+  .header{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .inicio h1{
+    font-size: 44px;
+    margin-top: 200px;
+    margin-bottom: 250px;
+  }
+
+  .sobre p{
+    column-count: 1;
+    font-size: 20px;
+  }
+
+  .grid-galeria{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .form-contrato{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px){
+  .header{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 10px;
+  }
+
+  .titulo-inicial{
+    justify-content: center;
+  }
+
+  .nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .nav a{
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  #inicio, #sobre, #galeria, #discografia, #conciertos, #contacto{
+    scroll-margin-top: 140px;
+  }
+
+  .inicio h1{
+    font-size: 30px;
+    width: 100%;
+    margin-top: 140px;
+    margin-bottom: 170px;
+  }
+
+  .sobre h2, .galeria h2, .discografia h2, .conciertos h2, .contacto h2{
+    font-size: 28px;
+  }
+
+  .sobre p{
+    column-count: 1;
+    font-size: 18px;
+  }
+
+  .grid-galeria{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .canciones{
+    font-size: 18px;
+  }
+
+  .form-contrato{
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  body{
+    padding-bottom: 55px;
+  }
+}

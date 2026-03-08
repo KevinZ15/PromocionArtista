@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Siente la música, vive la voz</title>
+</head>
+<body>
+    <header class="header">
+        <div class="titulo-inicial">
+            <img class="logo" src="./media/img/bob.png" alt="Bob Marley">
+            <h1>Bob Marley</h1>
+        </div>
+
+        <nav class="nav">
+                <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre el artista</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#discografia">Discografía</a></li>
+                <li><a href="#conciertos">Conciertos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="inicio" class="inicio">
+        <h1>Light up your day. Stir up your night</h1>
+    </div>
+    <div id="sobre" class="sobre">
+        <h2>Sobre la banda</h2>
+        <p>Bob Marley es un cantante, compositor y guitarrista jamaiquino, considerado uno de los pioneros del reggae. Su música combinó elementos de ska y rocksteady, y se caracterizó por sus letras con mensajes sociales y espirituales.
+
+        Marley se convirtió en un símbolo de paz, amor y unidad. Canciones como "One Love", "No Woman, No Cry" y "Redemption Song" siguen siendo escuchadas en todo el mundo.
+        </p>
+    </div>
+    <div id="galeria" class="galeria">
+        <h2>Galería</h2>
+        <div class="grid-galeria">
+            <img src="./media/img/cover_africaunite.jpg" alt="Imagen 1">
+            <img src="./media/img/cover_dub.jpg" alt="Imagen 2">
+            <img src="./media/img/cover_exodus.jpg" alt="Imagen 3">
+            <img src="./media/img/cover_legend.jpg" alt="Imagen 4">
+            <img src="./media/img/cover_onelove.jpeg" alt="Imagen 5">
+            <img src="./media/img/cover_roots.jpg" alt="Imagen 6">
+        </div>
+    </div>
+    <div id="discografia" class="discografia">
+        <h2>Discografía</h2>
+        <ul class="canciones">
+            <li id="li1">One Love</li>
+            <li id="li2">No Woman, No Cry</li>
+            <li id="li3">Redemption Song</li>
+            <li id="li4">Three Little Birds</li>
+            <li id="li5">Could You Be Loved</li>
+            <li id="li6">Buffalo Soldier</li>
+        </ul>
+        <div class="reproductor">
+            <p class="audio-titulo">Escuchar:</p>
+            <audio controls>
+                <source src="./media/audio/one-love.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div id="conciertos" class="conciertos">
+        <h2>Conciertos</h2>
+        <div class="reproductor-video">
+            <video controls width="100%">
+                <source src="./media/video/BobMarley - Concert.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div id="contacto" class="contacto">
+        <h2>Contrataciones</h2>
+        <form class="form-contrato" action="#" onsubmit="return false;">
+            <div class="campo">
+                <label for="nombre">Nombre del cliente</label>
+                <input id="nombre" type="text" placeholder="Ej: Kevin Soto" required>
+            </div>
+            <div class="campo">
+                <label for="telefono">Número de teléfono</label>
+                <input id="telefono" type="tel" placeholder="Ej: +506 8888-8888" required>
+            </div>
+            <div class="campo">
+                <label for="fecha">Fecha</label>
+                <input id="fecha" type="date" required>
+            </div>
+            <div class="campo">
+                <label for="hora">Hora</label>
+                <input id="hora" type="time" required>
+            </div>
+            <div class="campo campo-full">
+                <label for="direccion">Dirección del chivo</label>
+                <input id="direccion" type="text" placeholder="Ej: San José, Escazú..." required>
+            </div>
+            <div class="campo">
+                <label for="horas">¿Cuántas horas?</label>
+                <input id="horas" type="number" min="1" max="12" placeholder="Ej: 3" required>
+            </div>
+            <div class="campo">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Ej: correo@ejemplo.com" required>
+            </div>
+            <button class="btn-enviar" type="submit">Enviar solicitud</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2026 Bob Marley Music - Page by Kevin Zamora Soto</p>
+        <p class="footer-links">
+            <a href="mailto:contacto@bobmarley.com">contacto@bobmarley.com</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">YouTube</a>
+        </p>
+    </footer>
+</body>
+</html>
